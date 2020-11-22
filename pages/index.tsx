@@ -2,8 +2,13 @@ import Link from 'next/link';
 
 import Layout from '../components/Layout';
 
-const IndexPage: React.FunctionComponent = (): JSX.Element => (
-  <Layout title="Home | Next.js + TypeScript Example">
+interface Props {
+  title: string;
+  description: string;
+}
+
+const IndexPage: React.FC<Props> = (props): JSX.Element => (
+  <Layout title={`Home | ${props.title}`}>
     <h1>Hello Next.js 👋</h1>
     <p>
       <Link href="/">
@@ -12,5 +17,16 @@ const IndexPage: React.FunctionComponent = (): JSX.Element => (
     </p>
   </Layout>
 );
+
+export async function getStaticProps() {
+  const { title, description } = (await import(`../config.json`)).default;
+
+  return {
+    props: {
+      title,
+      description,
+    },
+  };
+}
 
 export default IndexPage;
