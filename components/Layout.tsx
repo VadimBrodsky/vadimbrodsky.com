@@ -1,16 +1,12 @@
-import React, { ReactNode } from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 
 type Props = {
-  children?: ReactNode;
+  children?: React.ReactNode;
   title?: string;
 };
 
-const Layout: React.FC<Props> = ({
-  children,
-  title = 'This is the default title',
-}): JSX.Element => (
+const Layout: React.FC<Props> = ({ children, title = 'This is the default title' }): JSX.Element => (
   <div>
     <Head>
       <title>{title}</title>
@@ -21,16 +17,7 @@ const Layout: React.FC<Props> = ({
       <nav>
         <Link href="/">
           <a>Home</a>
-        </Link>{' '}
-        |{' '}
-        <Link href="/about">
-          <a>About</a>
-        </Link>{' '}
-        |{' '}
-        <Link href="/users">
-          <a>Users List</a>
-        </Link>{' '}
-        | <a href="/api/users">Users API</a>
+        </Link>
       </nav>
     </header>
     {children}
