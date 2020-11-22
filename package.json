@@ -4,6 +4,12 @@
   "main": "index.js",
   "author": "Vadim Brodsky <vadim.brodsky@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc"
+  },
   "dependencies": {
     "next": "^10.0.2",
     "react": "^17.0.1",
