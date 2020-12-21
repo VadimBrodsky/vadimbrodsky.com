@@ -4,18 +4,29 @@ import Logo from './Logo';
 
 const Nav: React.FC = (): JSX.Element => (
   <nav className="container mx-auto text-center">
-    <Logo />
+    <Link href="/">
+      <a className="inline-block">
+        <Logo />
+      </a>
+    </Link>
+
     <ul className="lowercase text-center mt-10">
       <li className="inline-block">
-        <Link href="/">Blog</Link>
+        <Link href="/">
+          <a>Blog</a>
+        </Link>
         <span className="mx-3">/</span>
       </li>
       <li className="inline-block">
-        <Link href="/">Projects</Link>
+        <Link href="/">
+          <a>Projects</a>
+        </Link>
         <span className="mx-3">/</span>
       </li>
       <li className="inline-block">
-        <Link href="/">About</Link>
+        <Link href="/">
+          <a>About</a>
+        </Link>
       </li>
     </ul>
   </nav>
