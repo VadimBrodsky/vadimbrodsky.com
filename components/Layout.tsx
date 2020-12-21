@@ -1,7 +1,8 @@
 import Head from 'next/head';
-import Link from 'next/link';
 
-type Props = {
+import Nav from './Nav';
+
+interface Props {
   children?: React.ReactNode;
   title?: string;
 };
@@ -23,11 +24,7 @@ const Layout: React.FC<Props> = (props): JSX.Element => (
       <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#6d6d6d" />
     </Head>
     <header>
-      <nav>
-        <Link href="/">
-          <a>Home</a>
-        </Link>
-      </nav>
+      <Nav/>
     </header>
     {props.children}
     <footer>
