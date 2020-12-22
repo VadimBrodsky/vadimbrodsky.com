@@ -10,7 +10,7 @@ const Nav: React.FC = (): JSX.Element => (
       </a>
     </Link>
 
-    <ul className="lowercase text-center mt-10">
+    <ul className="lowercase font-mono text-center mt-10">
       <li className="inline-block">
         <Link href="/">
           <a>Blog</a>
