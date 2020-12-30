@@ -1,5 +1,3 @@
-/* import Link from 'next/link'; */
-
 import Layout from '../components/Layout';
 import Intro from '../components/Intro';
 import BlogList from '../components/BlogList';
@@ -26,9 +24,46 @@ const IndexPage: React.FC<Props> = (props): JSX.Element => (
       </p>
       <HrWave className="mx-auto w-36 text-gray-400 pt-16" />
     </Intro>
-    <BlogList />
+    <BlogList
+      posts={[
+        {
+          title: 'Top 7 reasons to try Vue.js in 2016 ',
+          date: 'Dec 29 2020',
+          description:
+            'Vue.js is an upcoming JavaScript frameworks that is worth a try, here are 7 good reasons to do so',
+          url: '/',
+        },
+        {
+          title: 'JavaScript Game Development — Where to Start? ',
+          date: 'Dec 29 2020',
+          description: 'So much tooling to little time where to event start',
+          url: '/',
+        },
+        {
+          title: 'To be or not ro be, is that a question! ',
+          date: 'Dec 29 2020',
+          description:
+            'Shakespare is one hell of a guy, how did he write all the stuff he did? A prodigy or a fraud?',
+          url: '/',
+        },
+        {
+          title: 'Types are cool and useful, you should give TypeScript a shot',
+          date: 'Dec 29 2020',
+          description:
+            'TypeScript is eating the JavaScript world, is there sizzle behind the hype?',
+          url: '/',
+        },
+        {
+          title: 'Who, What, Where the Serverless?',
+          date: 'Dec 29 2020',
+          description:
+            'Are there really serlvers in serverless, we dig down to find out once and for all',
+          url: '/',
+        },
+      ]}
+    />
     <Footer>
-      <HrWave className="mx-auto w-36 text-gray-400 pb-16" />
+      <HrWave className="mx-auto w-36 text-gray-400 pb-8" />
       <h2 className="font-sans font-light text-3xl text-center">Get in touch, say hello</h2>
     </Footer>
   </Layout>
