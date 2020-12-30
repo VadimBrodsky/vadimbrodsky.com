@@ -1,4 +1,3 @@
-import Footer from './Footer';
 import Head from './Head';
 import Nav from './Nav';
 
@@ -19,7 +18,6 @@ const Layout: React.FC<Props> = (props): JSX.Element => (
         <Nav />
       </header>
       {props.children}
-      <Footer />
     </div>
   </>
 );

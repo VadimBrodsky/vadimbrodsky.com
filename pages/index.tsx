@@ -2,7 +2,9 @@
 
 import Layout from '../components/Layout';
 import Intro from '../components/Intro';
+import BlogList from '../components/BlogList';
 import HrWave from '../components/HrWave';
+import Footer from '../components/Footer';
 
 interface Props {
   title: string;
@@ -22,8 +24,13 @@ const IndexPage: React.FC<Props> = (props): JSX.Element => (
         I take pride in creating digital experiences that solve problems and delight users. I am an
         avid tech enthusiast and geek, I love learning, tinkering and traveling.
       </p>
-      <HrWave className="mx-auto w-44 text-gray-400 pt-16" />
+      <HrWave className="mx-auto w-36 text-gray-400 pt-16" />
     </Intro>
+    <BlogList />
+    <Footer>
+      <HrWave className="mx-auto w-36 text-gray-400 pb-16" />
+      <h2 className="font-sans font-light text-3xl text-center">Get in touch, say hello</h2>
+    </Footer>
   </Layout>
 );
 
