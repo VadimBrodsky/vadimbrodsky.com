@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import classnames from 'classnames';
 
+import Button from './Button';
+
 interface Props {
   posts: Array<{
     date: string;
@@ -28,6 +30,7 @@ const BlogList: React.FC<Props> = (props): JSX.Element => {
             </li>
           ))}
         </ul>
+        <Button>Read More</Button>
       </div>
     </section>
   );
