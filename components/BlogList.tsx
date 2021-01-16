@@ -1,7 +1,7 @@
-import Link from 'next/link';
 import classnames from 'classnames';
 
 import Button from './Button';
+import TextLink from './TextLink';
 
 interface Props {
   posts: Array<{
@@ -19,11 +19,9 @@ const BlogList: React.FC<Props> = (props): JSX.Element => {
         <ul>
           {props.posts.map((post, i) => (
             <li key={i} className={classnames('mb-10')}>
-              <Link href={post.url}>
-                <a>
-                  <h2 className="font-sans text-xl font-bold">{post.title}</h2>
-                </a>
-              </Link>
+              <TextLink href={post.url}>
+                <h2 className="font-sans text-xl font-bold">{post.title}</h2>
+              </TextLink>
               <p className="text-gray-600">
                 {post.date} | <strong>TL;DR</strong> {post.description}
               </p>

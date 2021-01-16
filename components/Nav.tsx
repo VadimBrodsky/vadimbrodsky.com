@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import TextLink from './TextLink';
 
+import TextLink from './TextLink';
 import Logo from './Logo';
 
 const Nav: React.FC = (): JSX.Element => (
