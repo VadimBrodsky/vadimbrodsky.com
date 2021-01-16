@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import TextLink from './TextLink';
 
 interface Props {
   children?: React.ReactNode;
@@ -10,20 +10,19 @@ const Footer: React.FC<Props> = (props): JSX.Element => (
       {props.children}
       <ul className="lowercase font-mono mt-2 text-gray-600 text-center">
         <li className="inline-block">
-          <a href="https://github.com/vadimbrodsky/">Github</a> <span className="mx-3">/</span>
-        </li>
-        <li className="inline-block">
-          <a href="https://twitter.com/vadimbrodsky">Twitter</a>
+          <TextLink href="https://github.com/vadimbrodsky/">Github</TextLink>
           <span className="mx-3">/</span>
         </li>
         <li className="inline-block">
-          <a href="https://www.linkedin.com/in/vbrodsky/">LinkedIn</a>
+          <TextLink href="https://twitter.com/vadimbrodsky">Twitter</TextLink>
           <span className="mx-3">/</span>
         </li>
         <li className="inline-block">
-          <Link href="/rss">
-            <a>RSS</a>
-          </Link>
+          <TextLink href="https://www.TextLink.com/in/vbrodsky/">LinkedIn</TextLink>
+          <span className="mx-3">/</span>
+        </li>
+        <li className="inline-block">
+          <TextLink href="/rss">RSS</TextLink>
         </li>
       </ul>
     </div>
