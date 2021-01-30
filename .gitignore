@@ -33,8 +33,8 @@ yarn-error.log*
 
 # Yarn Berry
 .yarn/*
-!.yarn/cache
 !.yarn/releases
 !.yarn/plugins
 !.yarn/sdks
 !.yarn/versions
+.pnp.*
